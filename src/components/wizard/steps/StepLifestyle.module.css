@@ -1,0 +1,40 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1rem;
+}
+
+.chip {
+    padding: 1rem;
+    border: 2px solid var(--border-color, #e5e7eb);
+    border-radius: var(--border-radius-md);
+    background-color: var(--bg-white);
+    color: var(--text-main);
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.chip:hover {
+    border-color: var(--primary-orange);
+    background-color: rgba(217, 119, 6, 0.05);
+}
+
+.chipActive {
+    background-color: var(--primary-orange);
+    color: white;
+    border-color: var(--primary-orange);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(217, 119, 6, 0.2);
+}
+
+.chipActive:hover {
+    background-color: var(--primary-orange-hover);
+}
+
+.description {
+    margin-bottom: 1.5rem;
+    color: var(--text-muted);
+    text-align: center;
+}

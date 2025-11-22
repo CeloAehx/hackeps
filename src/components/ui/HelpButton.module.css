@@ -1,0 +1,30 @@
+.helpButton {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background-color: var(--primary-orange);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    z-index: 90;
+    /* Por debajo del sidebar pero encima del contenido */
+}
+
+.helpButton:hover {
+    transform: scale(1.1);
+    background-color: var(--primary-orange-hover);
+}
+
+.icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: currentColor;
+    font-weight: bold;
+    font-size: 1.5rem;
+}

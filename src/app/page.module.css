@@ -1,0 +1,101 @@
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 6rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Fondo con parallax */
+.backgroundWrapper {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: calc(100% + 100px);
+  z-index: 0;
+  will-change: transform;
+}
+
+.backgroundImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 251, 235, 0.5) 0%,
+    rgba(255, 251, 235, 0.65) 50%,
+    rgba(255, 251, 235, 0.75) 100%
+  );
+  z-index: 1;
+}
+
+/* Contenido por encima del fondo */
+.content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 5rem;
+  font-weight: 800;
+  color: var(--secondary-brown);
+  margin-bottom: 3rem;
+  letter-spacing: -0.05em;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.actions {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.button {
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border-radius: var(--border-radius-full);
+  transition: all 0.2s ease;
+  text-decoration: none;
+  min-width: 200px;
+}
+
+.primaryButton {
+  background-color: var(--primary-orange);
+  color: white;
+  box-shadow: 0 4px 6px rgba(217, 119, 6, 0.3);
+}
+
+.primaryButton:hover {
+  background-color: var(--primary-orange-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(217, 119, 6, 0.4);
+}
+
+.secondaryButton {
+  background-color: transparent;
+  color: var(--secondary-brown);
+  border: 2px solid var(--secondary-brown);
+}
+
+.secondaryButton:hover {
+  background-color: var(--secondary-brown);
+  color: white;
+  transform: translateY(-2px);
+}

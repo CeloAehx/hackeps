@@ -1,0 +1,127 @@
+.main {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  background-color: var(--bg-cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--secondary-brown);
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: -0.03em;
+}
+
+.content {
+  background-color: var(--bg-white);
+  padding: 2.5rem;
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.paragraph {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+}
+
+.paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.paragraph strong {
+  color: var(--primary-orange);
+  font-weight: 600;
+}
+
+/* Galería de fotos */
+.gallery {
+  margin-top: 3rem;
+}
+
+.galleryTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--secondary-brown);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.photoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.photoCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.photoWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--bg-white);
+}
+
+.photoWrapper:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(217, 119, 6, 0.3);
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.photoWrapper:hover .photo {
+  transform: scale(1.05);
+}
+
+.memberInfo {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.memberName {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--secondary-brown);
+  margin: 0 0 0.25rem 0;
+}
+
+.memberRole {
+  font-size: 0.95rem;
+  color: var(--primary-orange);
+  font-weight: 500;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .photoGrid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+}

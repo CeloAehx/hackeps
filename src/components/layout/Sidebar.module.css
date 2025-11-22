@@ -1,0 +1,122 @@
+/* Botón de Hamburguesa (Trigger) */
+.triggerButton {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 2000;
+    /* Asegura que esté por encima de todo, incluso del overlay */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.bar {
+    width: 2rem;
+    height: 0.25rem;
+    background-color: var(--secondary-brown);
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+}
+
+/* Overlay oscuro cuando el menú está abierto */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.overlayOpen {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Panel lateral (Sidebar) */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 300px;
+    background-color: var(--bg-white);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1500;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    /* Animación de entrada/salida */
+    transform: translateX(-100%);
+    /* Inicialmente fuera de pantalla a la izquierda */
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebarOpen {
+    transform: translateX(0);
+    /* Se desliza a su posición original */
+}
+
+.title {
+    font-family: var(--font-family-heading);
+    font-size: 1.5rem;
+    color: var(--secondary-brown);
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--primary-orange);
+    padding-bottom: 0.5rem;
+}
+
+.navList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.navLink {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    padding: 0.5rem;
+    border-radius: var(--border-radius-md);
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.navLink:hover {
+    background-color: var(--bg-cream);
+    color: var(--primary-orange);
+}
+
+/* Separador */
+.separator {
+    border: none;
+    border-top: 1px solid rgba(101, 78, 63, 0.2);
+    margin: 1.5rem 0;
+}
+
+/* Footer de la sidebar */
+.footer {
+    margin-top: auto;
+    padding-top: 1.5rem;
+    text-align: center;
+    border-top: 1px solid rgba(101, 78, 63, 0.1);
+}
+
+.credits {
+    font-size: 0.8rem;
+    color: rgba(101, 78, 63, 0.6);
+    margin: 0.25rem 0;
+    line-height: 1.4;
+}
